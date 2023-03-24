@@ -1,5 +1,6 @@
 
 import useStore from "../../utils/store";
+import {List, ListItem, Wrapper, Button} from "./NumberHistory.styled"
 
 const NumberHistory = () => { 
 
@@ -8,12 +9,15 @@ const NumberHistory = () => {
 
     return (
         <>
-            <ul>
-                {listOfNumbers.map((item, index) => (<li key={index}> {item}</li>))}
-            </ul>
+            <Wrapper> 
+            <List>
+                {listOfNumbers.map((item, index) => (<ListItem key={index}> {item}</ListItem>))}
+            </List>
         
-        { listOfNumbers.length !== 0 ?  <button type="submit" onClick={ () => deleteNumbers()}>Clear History</button> : null} 
-        </>
+        { listOfNumbers.length !== 0 ?  <Button type="submit" onClick={ () => deleteNumbers()}>Clear History</Button> : null} 
+        
+            </Wrapper>
+            </>
     )
 }
 

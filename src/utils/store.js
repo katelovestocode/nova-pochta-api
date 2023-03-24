@@ -12,6 +12,7 @@ const useStore = create(
       page: 1,
       totalCount: null,
       perPage: 50,
+      isLoading: false,
 
       setCurrentNumber: (number) => set(() => ({ currentNumber: number })),
 
@@ -35,6 +36,8 @@ const useStore = create(
       setTotalCount: (count) => set(() => ({ totalCount: count })),
 
       loadMore: () => set((state) => ({ page: state.page + 1 })),
+
+      isLoadingSwitch: () => set((state) => ({ isLoading: !state.isLoading })),
     }),
 
     {

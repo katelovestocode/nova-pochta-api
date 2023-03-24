@@ -6,7 +6,18 @@ export const theme = {
   },
 
   //           0   1   2   3   4   5   6   7   8   9  10  11
-  fontSizes: [12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 64, 72],
+  fontSize: [12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 64, 72],
+
+  fontSizes: {
+    xs: "12px",
+    s: "14px",
+    m: "16px",
+    sm: "20px",
+    l: "32px",
+    ml: "42px",
+    x: "54px",
+    xl: "64px",
+  },
 
   fontWeights: {
     regular: 400,
@@ -15,7 +26,7 @@ export const theme = {
     bold: 700,
   },
 
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, "auto"],
 
   colors: {
     red: "#d90429",
@@ -38,8 +49,8 @@ export const theme = {
 
   //border-radius
   radii: {
-    tiny: "10px",
-    small: "20px",
+    tiny: "6px",
+    small: "8px",
     normal: "40px",
     round: "50%",
   },

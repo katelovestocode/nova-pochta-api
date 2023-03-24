@@ -1,10 +1,11 @@
 import  {Layout}  from "./components/Layout/Layout";
 import  Home  from "./pages/Home/Home"
-import Locations from "./pages/Locations/Locations"
+//import Locations from "./pages/Locations/Locations"
 import { Route, Routes } from "react-router-dom";
+import { lazy } from 'react';
 
 
-
+const Locations = lazy(() => import('./pages/Locations/Locations'));
 
 export default function App() {
 

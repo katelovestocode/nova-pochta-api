@@ -27,6 +27,7 @@ const DeptSearchForm = () => {
     const addLocations = useStore((state) => state.addLocations);
     const setTotalCount = useStore((state) => state.setTotalCount);
     const page = useStore((state) => state.page);
+    const isLoadingSwitch = useStore((state) => state.isLoadingSwitch);
 
     const formik = useFormik({
         initialValues: {
@@ -46,19 +47,19 @@ const DeptSearchForm = () => {
             if (!searchQuery) {
                     return;
                 }
-            fetchLocation(searchQuery, page)
-                .then(response => { 
-                    if (response.success === false) { new Error(`There is no Location`) } else { return response}
-                })
-                .then(info => {
-                    if (page === 1) {
-                        setLocations(info.data);
-                    } else {
-                        addLocations(info.data);  
-                    }
-                    setTotalCount(info.info.totalCount);
-                    
-                }).catch(error => error.message) 
+         fetchLocation(searchQuery, page)
+             .then(response => {
+                 if (response.success === false) { new Error(`There is no Location`) } else { return response }
+             })
+             .then(info => {
+                 isLoadingSwitch();
+                 if (page === 1) {
+                     setLocations(info.data);
+                 } else {
+                     addLocations(info.data);
+                 }
+                 setTotalCount(info.info.totalCount);
+             }).catch(error => error.message).finally(isLoadingSwitch());
     }, [searchQuery, page])
     
 

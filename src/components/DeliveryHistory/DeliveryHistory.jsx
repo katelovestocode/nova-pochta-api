@@ -1,4 +1,5 @@
 import useStore from "../../utils/store";
+import {Container, Item} from "./DeliveryHistory.styled"
 
 const DeliveryHistory = () => { 
 
@@ -12,13 +13,13 @@ const DeliveryHistory = () => {
                 
             {ttnInfo.map((item, index) => { return (
 
-                <div key={index}>
-                    <p> Delivery Status: {item.Status && (item.Status)} </p>
+                <Container key={index}>
+                    <Item> Delivery Status: {item.Status && (item.Status)} </Item>
                     
-                    <p> Sent From: {item.WarehouseSender && ( item.WarehouseSender)} </p>
-                    <p> Received at: {item.WarehouseRecipient && (item.WarehouseRecipient)}</p>
+                    <Item> Sent From: {item.WarehouseSender && ( item.WarehouseSender)} </Item>
+                    <Item> Received at: {item.WarehouseRecipient && (item.WarehouseRecipient)}</Item>
                    
-                </div> )})}
+                </Container> )})}
             
             </>)     
     )
