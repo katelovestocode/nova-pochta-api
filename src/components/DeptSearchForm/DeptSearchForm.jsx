@@ -60,7 +60,7 @@ const DeptSearchForm = () => {
                  }
                  setTotalCount(info.info.totalCount);
              }).catch(error => error.message).finally(isLoadingSwitch());
-    }, [searchQuery, page])
+    }, [searchQuery, page, setLocations, setTotalCount, addLocations, isLoadingSwitch])
     
 
     return (

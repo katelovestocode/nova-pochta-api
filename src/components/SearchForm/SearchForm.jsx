@@ -21,7 +21,6 @@ const SearchForm = () => {
     const listOfNumbers = useStore((state) => state.listOfNumbers);
     const setTtnInfo = useStore((state) => state.setTtnInfo);
     const currentNumber = useStore((state) => state.currentNumber);
-    const isLoading = useStore((state) => state.isLoading);
     const isLoadingSwitch = useStore((state) => state.isLoadingSwitch);
     
     const formik = useFormik({
@@ -63,7 +62,7 @@ const SearchForm = () => {
                 }).catch(error => error.message).finally(isLoadingSwitch())
         }
        
-    }, [currentNumber, setTtnInfo])
+    }, [currentNumber, setTtnInfo, isLoadingSwitch])
 
 
     return (

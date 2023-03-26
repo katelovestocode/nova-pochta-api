@@ -1,6 +1,6 @@
 
 import useStore from "../../utils/store";
-import {List, ListItem, City, Department, Schedule, WeightTitle, Weight, Day, Hours, Wrapper} from "./LocationsList.styled"
+import {List, ListItem, City, Department, Schedule, Day, Hours, Wrapper} from "./LocationsList.styled"
 
 const LocationsList = () => {
 
