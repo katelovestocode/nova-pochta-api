@@ -19,23 +19,29 @@ box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 
 export const Navigation = styled.nav`
 display: flex; 
-gap: 60px;
+gap: 20px;
+
+ @media (min-width: 780px) { 
+
+      gap: 60px;
+    }
 `
 export const NavItem = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  gap: ${p => p.theme.space[3]}px;
-  padding: ${p => p.theme.space[4]}px;
+  text-align: center;
+  gap: ${p => p.theme.space[2]}px;
+  padding: ${p => p.theme.space[2]}px;
   border-radius:${p => p.theme.radii.normal};
   font-weight: ${p => p.theme.fontWeights.bold};
-  font-size: 30px;
+  font-size: 18px;
   color: ${p => p.theme.colors.white};
   min-width: 100px;
   border-radius:${p => p.theme.radii.small};
   border: 0px solid;
- 
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 
   &.active {
     color: ${p => p.theme.colors.white};
@@ -49,4 +55,12 @@ export const NavItem = styled(NavLink)`
     border-radius:${p => p.theme.radii.small};
     border: 0px solid;
   }
+
+
+    @media (min-width: 780px) { 
+
+      font-size: 30px;
+      padding: ${p => p.theme.space[4]}px;
+      gap: ${p => p.theme.space[3]}px;
+    }
 `;

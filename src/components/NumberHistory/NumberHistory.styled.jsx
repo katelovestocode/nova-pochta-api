@@ -13,7 +13,7 @@ justify-content: center;
 `
 
 export const ListItem = styled.li`
-font-size:  ${p => p.theme.fontSizes.sm};
+font-size:  ${p => p.theme.fontSizes.s};
 color: ${p => p.theme.colors.dark};
 display: flex;
 padding: 10px 15px;
@@ -21,7 +21,19 @@ margin-bottom: 10px;
 background-color: ${p => p.theme.colors.gray};
 border-radius:${p => p.theme.radii.tiny};
 box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
-width: 300px;
+
+min-width: 180px;
+
+
+@media (min-width: 780px) {
+  width: 250px;
+  font-size:  ${p => p.theme.fontSizes.sm};
+ }
+
+ @media (min-width: 1200px) {
+  width: 300px;
+ }
+
 `
 
 export const Wrapper = styled.div`
@@ -35,8 +47,8 @@ export const Button = styled.button`
 margin-top: ${p => p.theme.space[3]}px;
 color: ${p => p.theme.colors.white};
 font-weight: ${p => p.theme.fontWeights.bold};
-font-size: ${p => p.theme.fontSizes.m};
-width: 150px;
+font-size: ${p => p.theme.fontSizes.s};
+width: 120px;
 padding: ${p => p.theme.space[2]}px;
 background-color: ${p => p.theme.colors.lightRed};
 border-radius:${p => p.theme.radii.tiny};
@@ -47,5 +59,10 @@ box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
     background-color: ${p => p.theme.colors.redAccent};
     color: ${p => p.theme.colors.white};
   }
+
+  @media (min-width: 780px) {
+  width: 150px;
+  font-size:  ${p => p.theme.fontSizes.sm};
+ }
 
 `

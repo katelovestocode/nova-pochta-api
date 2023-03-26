@@ -82,7 +82,7 @@ const SearchForm = () => {
                     placeholder="Enter TTN Number" />
         
                 {formik.touched.ttnNumber && formik.errors.ttnNumber ? (<Warning>{formik.errors.ttnNumber}</Warning>) : null}
-                <Button type="submit">GET the Status</Button>
+                <Button type="submit">Submit</Button>
             </Form>
         
         </>

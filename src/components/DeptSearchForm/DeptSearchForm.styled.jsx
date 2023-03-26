@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Form = styled.form`
 display: flex;
 flex-direction: column;
@@ -29,11 +30,11 @@ font-size:  ${p => p.theme.fontSizes.sm};
 export const Button = styled.button`
 margin-top: ${p => p.theme.space[6]}px;
 color: ${p => p.theme.colors.white};
+background-color: ${p => p.theme.colors.lightRed};
 font-weight: ${p => p.theme.fontWeights.bold};
 font-size: ${p => p.theme.fontSizes.s};
 width: 130px;
 padding: ${p => p.theme.space[2]}px;
-background-color: ${p => p.theme.colors.lightRed};
 border-radius:${p => p.theme.radii.tiny};
 border: 0px solid;
 box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
@@ -51,7 +52,6 @@ box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 `
 
 export const Warning = styled.div`
-
 padding: ${p => p.theme.space[2]}px;
 color: ${p => p.theme.colors.red};
 font-size: ${p => p.theme.fontSizes.sm};

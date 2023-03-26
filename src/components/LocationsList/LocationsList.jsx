@@ -1,30 +1,35 @@
 
 import useStore from "../../utils/store";
+import {List, ListItem, City, Department, Schedule, WeightTitle, Weight, Day, Hours, Wrapper} from "./LocationsList.styled"
 
 const LocationsList = () => {
 
      const locations = useStore((state) => state.locations);
 
     return (
-        <ul>
+        <List>
             {locations && (
                 locations.map((item, index) => {
-                    return (<li key={index}>
-                        <h2>{item.CityDescription} </h2>
-                        <p> {item.Description} </p>
-                        {item.TotalMaxWeightAllowed !== "0" ? (<p> Total Max Weight Allowed: {item.TotalMaxWeightAllowed} kg </p>) : <p> Total Max Weight Allowed: No Limitation in weight </p>}
-                        <h3> Schedule:  </h3>
-                        <p> Monday: {item.Schedule.Monday} </p>
-                        <p> Tuesday: {item.Schedule.Tuesday} </p>
-                        <p> Wednesday: {item.Schedule.Wednesday} </p>
-                        <p> Thursday: {item.Schedule.Thursday} </p>
-                        <p> Friday: {item.Schedule.Friday} </p>
-                        <p> Saturday: {item.Schedule.Saturday} </p>
-                        <p> Sunday: {item.Schedule.Sunday} </p>
-
-                    </li>)
+                    return (<ListItem key={index}>
+                        <Wrapper>
+                        <City>{item.CityDescription} </City>
+                        <Department> {item.Description} </Department>
+                        
+                        </Wrapper>
+                        
+                        <Wrapper> 
+                        <Schedule> Schedule:  </Schedule>
+                        <Day> Monday: <Hours>{item.Schedule.Monday} </Hours> </Day>
+                        <Day> Tuesday: <Hours>{item.Schedule.Tuesday} </Hours> </Day>
+                        <Day> Wednesday: <Hours> {item.Schedule.Wednesday}</Hours> </Day>
+                        <Day> Thursday: <Hours> {item.Schedule.Thursday}</Hours> </Day>
+                        <Day> Friday: <Hours> {item.Schedule.Friday}</Hours> </Day>
+                        <Day> Saturday: <Hours>{item.Schedule.Saturday} </Hours> </Day>
+                        <Day> Sunday: <Hours>{item.Schedule.Sunday} </Hours> </Day>
+                        </Wrapper>
+                    </ListItem>)
                 }))}
-        </ul>)
+        </List>)
 }
 
 export default LocationsList;

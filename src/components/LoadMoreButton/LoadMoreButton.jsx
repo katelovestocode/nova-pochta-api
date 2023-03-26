@@ -1,4 +1,5 @@
 import useStore from "../../utils/store";
+import {Button} from "./LoadMoreButton.styled"
 
 const LoadMoreButton = () => { 
 
@@ -10,7 +11,7 @@ const LoadMoreButton = () => {
     return (
         
         <>
-             {totalCount >= perPage &&  <button type="submit" onClick={()=> loadMore()}>Load More</button> }
+             {totalCount >= perPage &&  <Button type="submit" onClick={()=> loadMore()}>Load More</Button> }
         
         </>
     )

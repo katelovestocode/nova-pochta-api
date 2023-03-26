@@ -36,6 +36,7 @@ export const theme = {
     borderColor: "#e7eaed",
     gray: "#edf2f4",
     darkerGray: "#8d99ae",
+    greyTextColor: "rgb(119, 136, 153)",
     dark: "#2b2d42",
     black: "#000000",
     white: "#fff",

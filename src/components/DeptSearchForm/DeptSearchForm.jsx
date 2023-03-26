@@ -1,9 +1,9 @@
-
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import useStore from "../../utils/store";
 import { useEffect } from 'react';
 import { fetchLocation } from '../../utils/fetchData';
+import {Form, Input, Button, Warning} from "./DeptSearchForm.styled"
 
 const validationSchema = Yup.object({
   locationName: Yup.string()
@@ -66,8 +66,8 @@ const DeptSearchForm = () => {
     return (
         
         <>
-    <form onSubmit={formik.handleSubmit}>
-                <input
+    <Form onSubmit={formik.handleSubmit}>
+                <Input
                     id="locationName"
                     name="locationName"
                     type="text"
@@ -76,10 +76,10 @@ const DeptSearchForm = () => {
                     placeholder="Enter Location Name" />
         
                 {formik.touched.locationName && formik.errors.locationName ? (<div>{formik.errors.locationName}</div>) : null}
-                <button type="submit">Submit</button>
-    </form>
+                <Button type="submit">Submit</Button>
+    </Form>
 
-    {totalCount === 0 ? (<p> There are no Department Locations with {searchQuery} Name. Please try again </p>) : null}
+    {totalCount === 0 ? (<Warning> There are no Department Locations with {searchQuery} Name. Please try again </Warning>) : null}
         
     </>
     )
