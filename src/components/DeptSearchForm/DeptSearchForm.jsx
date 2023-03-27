@@ -75,7 +75,7 @@ const DeptSearchForm = () => {
                     value={formik.values.locationName}
                     placeholder="Enter Location Name" />
         
-                {formik.touched.locationName && formik.errors.locationName ? (<div>{formik.errors.locationName}</div>) : null}
+                {formik.touched.locationName && formik.errors.locationName ? (<Warning>{formik.errors.locationName}</Warning>) : null}
                 <Button type="submit">Submit</Button>
     </Form>
 
