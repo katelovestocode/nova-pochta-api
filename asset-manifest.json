@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nova-pochta-api/static/css/main.3bbf0b22.css",
-    "main.js": "/nova-pochta-api/static/js/main.e3153395.js",
+    "main.js": "/nova-pochta-api/static/js/main.ee600ca8.js",
     "static/js/876.7ca3affb.chunk.js": "/nova-pochta-api/static/js/876.7ca3affb.chunk.js",
     "index.html": "/nova-pochta-api/index.html",
     "main.3bbf0b22.css.map": "/nova-pochta-api/static/css/main.3bbf0b22.css.map",
-    "main.e3153395.js.map": "/nova-pochta-api/static/js/main.e3153395.js.map",
+    "main.ee600ca8.js.map": "/nova-pochta-api/static/js/main.ee600ca8.js.map",
     "876.7ca3affb.chunk.js.map": "/nova-pochta-api/static/js/876.7ca3affb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3bbf0b22.css",
-    "static/js/main.e3153395.js"
+    "static/js/main.ee600ca8.js"
   ]
 }
